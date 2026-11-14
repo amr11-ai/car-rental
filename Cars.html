@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" lang="ar" dir="rtl">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>السيارات - مكتب تأجير السيارات</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="myFunctions.js"></script>
+</head>
+<body>
+  <div id="header">
+    <h1>مكتب تأجير السيارات</h1>
+    <p>السيارات المتوفرة</p>
+  </div>
+  <ul id="nav">
+    <li><a href="home.html">الرئيسية</a></li>
+    <li><a href="AboutUs.html">من نحن</a></li>
+    <li><a href="Cars.html" class="active">السيارات</a></li>
+    <li class="exit"><a href="#" id="exit-link">خروج</a></li>
+  </ul>
+
+  <div id="content">
+    <div class="box">
+      <table id="cars-table">
+        <tr>
+          <th>الرمز</th>
+          <th>الصورة</th>
+          <th>الموديل</th>
+          <th>سنة الصنع</th>
+          <th>السعر اليومي</th>
+          <th>إظهار التفاصيل</th>
+          <th>اختيار</th>
+        </tr>
+        <tr>
+          <td>CR-001</td>
+          <td><img src="images/car1.jpg" alt="Dodge Challenger Hellcat" /></td>
+          <td id="model1">Dodge Challenger Hellcat</td>
+          <td>2021</td>
+          <td id="price1">900000 ل.س</td>
+          <td><input type="checkbox" class="details-box" id="show1" /></td>
+          <td><input type="checkbox" class="select-box" id="select1" /></td>
+        </tr>
+        <tr class="details-row" id="details1">
+          <td colspan="7">نوع الوقود: بنزين<br />ناقل الحركة: أوتوماتيك<br />عدد المقاعد: 5<br />عداد الكيلومترات: 20000 كم<br />اللون: أحمر</td>
+        </tr>
+
+        <tr>
+          <td>CR-002</td>
+          <td><img src="images/car2.jpg" alt="Mercedes S-Class AMG" /></td>
+          <td id="model2">Mercedes S-Class AMG</td>
+          <td>2022</td>
+          <td id="price2">1200000 ل.س</td>
+          <td><input type="checkbox" class="details-box" id="show2" /></td>
+          <td><input type="checkbox" class="select-box" id="select2" /></td>
+        </tr>
+        <tr class="details-row" id="details2">
+          <td colspan="7">نوع الوقود: بنزين<br />ناقل الحركة: أوتوماتيك<br />عدد المقاعد: 5<br />عداد الكيلومترات: 15000 كم<br />اللون: أسود</td>
+        </tr>
+
+        <tr>
+          <td>CR-003</td>
+          <td><img src="images/car3.jpg" alt="Corvette C6 ZR1" /></td>
+          <td id="model3">Corvette C6 ZR1</td>
+          <td>2010</td>
+          <td id="price3">1100000 ل.س</td>
+          <td><input type="checkbox" class="details-box" id="show3" /></td>
+          <td><input type="checkbox" class="select-box" id="select3" /></td>
+        </tr>
+        <tr class="details-row" id="details3">
+          <td colspan="7">نوع الوقود: بنزين<br />ناقل الحركة: يدوي<br />عدد المقاعد: 2<br />عداد الكيلومترات: 40000 كم<br />اللون: رمادي</td>
+        </tr>
+
+        <tr>
+          <td>CR-004</td>
+          <td><img src="images/car4.jpg" alt="GMC Sierra" /></td>
+          <td id="model4">GMC Sierra</td>
+          <td>2020</td>
+          <td id="price4">600000 ل.س</td>
+          <td><input type="checkbox" class="details-box" id="show4" /></td>
+          <td><input type="checkbox" class="select-box" id="select4" /></td>
+        </tr>
+        <tr class="details-row" id="details4">
+          <td colspan="7">نوع الوقود: بنزين<br />ناقل الحركة: أوتوماتيك<br />عدد المقاعد: 5<br />عداد الكيلومترات: 55000 كم<br />اللون: أبيض</td>
+        </tr>
+
+        <tr>
+          <td>CR-005</td>
+          <td><img src="images/car5.jpg" alt="Toyota Cressida" /></td>
+          <td id="model5">Toyota Cressida</td>
+          <td>1990</td>
+          <td id="price5">200000 ل.س</td>
+          <td><input type="checkbox" class="details-box" id="show5" /></td>
+          <td><input type="checkbox" class="select-box" id="select5" /></td>
+        </tr>
+        <tr class="details-row" id="details5">
+          <td colspan="7">نوع الوقود: بنزين<br />ناقل الحركة: أوتوماتيك<br />عدد المقاعد: 5<br />عداد الكيلومترات: 250000 كم<br />اللون: فضي</td>
+        </tr>
+      </table>
+
+      <p><button type="button" id="continue-btn">متابعة</button></p>
+    </div>
+
+    <div class="box" id="booking">
+      <h2>نموذج الحجز</h2>
+      <form id="booking-form" action="#" method="post">
+        <fieldset>
+          <legend>بيانات مقدم الطلب</legend>
+          <p>
+            <label for="fullname">الاسم الكامل:</label>
+            <input type="text" id="fullname" name="fullname" />
+            <span class="error" id="err-name"></span>
+          </p>
+          <p>
+            <label for="nid">الرقم الوطني:</label>
+            <input type="text" id="nid" name="nid" maxlength="11" />
+            <span class="error" id="err-nid"></span>
+          </p>
+          <p>
+            <label for="mobile">رقم الموبايل:</label>
+            <input type="text" id="mobile" name="mobile" />
+            <span class="error" id="err-mobile"></span>
+          </p>
+          <p>
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="text" id="email" name="email" />
+            <span class="error" id="err-email"></span>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>مدة التأجير</legend>
+          <p>
+            <label for="start-date">تاريخ البداية:</label>
+            <input type="text" id="start-date" name="start-date" />
+            <span class="hint">yyyy-mm-dd</span>
+            <span class="error" id="err-start"></span>
+          </p>
+          <p>
+            <label for="end-date">تاريخ النهاية:</label>
+            <input type="text" id="end-date" name="end-date" />
+            <span class="hint">yyyy-mm-dd</span>
+            <span class="error" id="err-end"></span>
+          </p>
+        </fieldset>
+
+        <p><button type="submit">إرسال</button></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="footer">مكتب تأجير السيارات</div>
+</body>
+</html>

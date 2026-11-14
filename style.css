@@ -1,0 +1,64 @@
+/* ===== style.css : ملف التنسيق الوحيد لكل صفحات الموقع ===== */
+
+/* الخط: يُحدَّد من مكان واحد فقط (نوع وحجم الخط) */
+body, input, select, textarea, button, table {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* ألوان الموقع من مكان واحد */
+body { margin: 0; background-color: #faf5f6; color: #1b2a41; direction: rtl; }
+h1, h2, h3 { color: #8e1b2f; }
+
+/* الترويسة وقائمة التنقل */
+#header { background-color: #8e1b2f; color: #ffffff; padding: 18px 24px; }
+#header h1 { margin: 0; color: #ffffff; font-size: 26px; }
+#header p { margin: 4px 0 0 0; }
+
+#nav { background-color: #5c0f1c; margin: 0; padding: 0; list-style-type: none; overflow: hidden; }
+#nav li { float: right; }
+#nav a { display: block; padding: 12px 22px; color: #ffffff; text-decoration: none; }
+#nav a:hover { background-color: #c0394f; }
+#nav a.active { background-color: #c0394f; font-weight: bold; }
+#nav li.exit { float: left; }
+#nav li.exit a { background-color: #333333; }
+
+/* المحتوى */
+#content { max-width: 960px; margin: 24px auto; padding: 0 16px; }
+.box { background-color: #ffffff; border: 1px solid #ecd0d5; border-radius: 6px; padding: 16px 20px; margin-bottom: 20px; }
+#footer { text-align: center; padding: 16px; color: #ffffff; background-color: #5c0f1c; }
+
+/* الجداول */
+table { width: 100%; border-collapse: collapse; background-color: #ffffff; }
+th { background-color: #c0394f; color: #ffffff; padding: 10px; border: 1px solid #ecd0d5; }
+td { padding: 10px; border: 1px solid #ecd0d5; text-align: center; }
+td img { width: 120px; height: 80px; object-fit: cover; }
+
+/* صفوف تفاصيل السيارة: مخفية بالبداية ويظهرها jQuery */
+.details-row { display: none; }
+.details-row td { background-color: #fdf0f2; text-align: right; line-height: 1.8; }
+
+/* عناصر الإدخال النصية: تنسيق واحد لجميعها (اللون وغيره) */
+input[type="text"] {
+  background-color: #fdf0f2;
+  color: #1b2a41;
+  border: 1px solid #c0394f;
+  border-radius: 4px;
+  padding: 6px 8px;
+  width: 260px;
+}
+
+/* الأزرار */
+button, input[type="submit"] {
+  background-color: #c0394f; color: #ffffff; border: 0; border-radius: 4px; padding: 8px 20px; cursor: pointer;
+}
+button:hover, input[type="submit"]:hover { background-color: #8e1b2f; }
+
+/* نموذج الحجز: مخفي بالبداية ويظهره زر "متابعة" */
+#booking { display: none; }
+fieldset { border: 1px solid #c0394f; border-radius: 6px; margin-bottom: 14px; }
+legend { color: #8e1b2f; font-weight: bold; padding: 0 8px; }
+label { display: inline-block; min-width: 130px; margin: 6px 0; }
+.error { color: #b3261e; margin-right: 8px; }
+.hint { color: #5b6b82; font-size: 13px; }
+
